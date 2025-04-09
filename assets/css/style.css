@@ -87,6 +87,13 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+h2.promo-title {
+    font-size: 1.4rem;
+    color: #ff8500;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .promo-subtitle {
     font-size: 1.2rem;
     text-align: center;
@@ -104,7 +111,7 @@ body {
     transition: max-height 1s ease-in-out;
 }
 
-.promo.expanded{
+.promo.expanded {
     max-height: 20rem;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -174,6 +181,7 @@ body {
     margin-top: 1rem;
     text-align: center;
 }
+
 .footer p.disclaimer {
     opacity: 1;
     color: white;
@@ -203,7 +211,8 @@ body {
     margin: 0rem 0 0rem;
     color: white;
 }
-.btn-section.promo-notice span{
+
+.btn-section.promo-notice span {
     color: #ff8500;
 }
 
@@ -454,4 +463,32 @@ body {
     color: white;
     font-weight: bold;
     background-color: #ff8500 !important;
+}
+
+.top-bar {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    margin: auto;
+    z-index: 1000;
+}
+
+.privacy-btn {
+
+    background: linear-gradient(180deg, #ff8500, #c44c02);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+}
+
+.privacy-btn:hover,
+.more-info-btn:hover,
+.download-btn:hover {
+    background: linear-gradient(180deg, #f57c00, #d32f2f);
 }
