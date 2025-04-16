@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thai Lotto Filter</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-image">
+  <div class="container">
+    <!-- App Promo Section -->
+    <section class="promo-section">
+      <div class="top-bar-policy">
+        <a href="privacy-policy_en.html" class="privacy-btn">Privacy Policy</a>
+        <a href="index_en.html" class="privacy-btn">TH</a>
+      </div>
+      <h1 class="promo-title">Thai Lotto Filter</h1>
+      <p class="promo-subtitle">Check and filter your lottery numbers easily!</p>
+      <div class="promo-content">
+        <div class="promo collapsed">
+          <p>Welcome to <strong>Thai Lotto Filter</strong>, the perfect tool for Thai lottery players! This
+            application allows you to quickly and efficiently check your winning numbers and filter past lottery
+            results by any character. Whether it’s the most recent draw or up to 14 years of database, we’ve got it all in one place!</p>
+
+          <h2>Main Features</h2>
+          <ul>
+            <li><strong>Flexible filtering:</strong> Filter lottery numbers by any character! Whether you’re looking for the first, last, or any middle position (1-6 characters), the app will find the matching numbers from the 6-digit jackpot to 2 and 3-digit winnings.</li>
+            <li><strong>Comprehensive database:</strong> Browse Thai lottery results, including the jackpot (6,000,000 ฿), surrounding numbers (100,000 ฿), lucky winnings of 5, 10, 50, and 100, as well as 2 and 3-digit numbers (2000-4000 ฿).</li>
+            <li><strong>Intuitive interface:</strong> Use the "+" and "-" buttons to adjust filter values, or reset them with a single touch. Filters update results in real-time!</li>
+            <li><strong>Thai date format:</strong> Draw dates appear in the traditional Thai format (e.g., "16 ตุลาคม 2567") for an even more authentic experience.</li>
+            <li><strong>Responsive design:</strong> Enjoy smooth Parallax scrolling and modern, gradient-based buttons that make the app visually standout.</li>
+          </ul>
+
+          <h2>What can you use it for?</h2>
+          <ul>
+            <li>Check if you won the most recent draw.</li>
+            <li>Explore past winning numbers and find your favorite combinations.</li>
+            <li>Filter numbers based on your own strategies – for example, search for all numbers ending in "5" or starting with "123".</li>
+          </ul>
+
+          <h2>Why choose Thai Lotto Filter?</h2>
+          <p>Thai Lotto Filter is unique because it doesn’t just show the latest results; it offers a comprehensive
+            database where you can filter by any character. From the 6-digit jackpot to 2-digit winnings, we cover
+            everything, so you’re always up to date. The app also works offline with local data when there's no internet
+            connection and optimizes performance with caching. Plus, it collects no personal or user data, ensuring your privacy is guaranteed.</p>
+
+          <h2>How does it work?</h2>
+          <ol>
+            <li><strong>Select the filter position:</strong> Use the 6 inputs to set the number positions.</li>
+            <li><strong>Set the values:</strong> Use the "+" and "-" buttons to select the desired digits (0-9).</li>
+            <li><strong>Filter the results:</strong> The app immediately displays the results from the entire database.</li>
+            <li><strong>Check your winnings:</strong> See if you've won in various Thai lottery categories!</li>
+          </ol>
+
+          <h2>Data Source</h2>
+          <p>The app operates based on official Thai lottery results and is regularly updated with the latest draws (e.g., "2024-10-16" – 482962 as the jackpot). Numbers are available in 6, 3, and 2 character formats, covering all prize categories.</p>
+
+          <h2>Install Now!</h2>
+          <p>Download <strong>Thai Lotto Filter</strong> and start exploring the lottery numbers today! Be the next lucky winner – filter your lucky numbers easily and quickly!</p>
+        </div>
+        <div>
+          <button class="more-info-btn" onclick="togglePromoContent()">More Info</button>
+          <p class="disclaimer"><em>Note: This app is for entertainment and informational purposes only and is not affiliated with official lottery organizations.</em></p>
+          <a href="https://play.google.com/store/apps/details?id=com.lebryere.ThaiLottoFilter" class="download-btn">Download from Play Store</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <div class="bg-image">
+      <div class="btn-section promo-notice">
+        <p class="result-count">This page contains only <span>2024 data!</span> To access 14 years of data, download the app from the Play Store!</p>
+      </div>
+      <div class="btn-section">
+        <div class="buttons">
+          <button active="false" id="reset-btn-0">RESET</button>
+          <button id="increase-btn-0" data-index="0">+</button>
+          <input type="number" data-index="0" id="sixth-last-filter-value" value="0" readonly>
+          <button id="decrease-btn-0" data-index="0">-</button>
+        </div>
+        <div class="buttons">
+          <button active="false" id="reset-btn-1">RESET</button>
+          <button id="increase-btn-1" data-index="1">+</button>
+          <input type="number" data-index="1" id="fifth-last-filter-value" value="0" readonly>
+          <button id="decrease-btn-1" data-index="1">-</button>
+        </div>
+        <div class="buttons">
+          <button active="false" id="reset-btn-2">RESET</button>
+          <button id="increase-btn-2" data-index="2">+</button>
+          <input type="number" data-index="2" id="fourth-last-filter-value" value="0" readonly>
+          <button id="decrease-btn-2" data-index="2">-</button>
+        </div>
+        <div class="buttons">
+          <button active="false" id="reset-btn-3">RESET</button>
+          <button id="increase-btn-3" data-index="3">+</button>
+          <input type="number" data-index="3" id="third-last-filter-value" value="0" readonly>
+          <button id="decrease-btn-3" data-index="3">-</button>
+        </div>
+        <div class="buttons">
+          <button active="false" id="reset-btn-4">RESET</button>
+          <button id="increase-btn-4" data-index="4">+</button>
+          <input type="number" data-index="4" id="second-last-filter-value" value="0" readonly>
+          <button id="decrease-btn-4" data-index="4">-</button>
+        </div>
+        <div class="buttons">
+          <button active="false" id="last-reset-btn-5">RESET</button>
+          <button id="increase-btn-5" data-index="5">+</button>
+          <input type="number" data-index="5" id="filter-value" value="0" readonly>
+          <button id="decrease-btn-5" data-index="5">-</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Section -->
+    <div class="data-section" id="data-container">
+      <div class="dataHeader item-1">
+        <h4 class="jsonDataName">winning-number</h4>
+        <p class="result-count" id="result-count-jsonData0"></p>
+      </div>
+      <div id="file-data-container-0" class="file-data-container content visible item-1">
+        <div class="data-container file-data">
+          <ul id="jsonData0"></ul>
+        </div>
+      </div>
+      <div class="dataHeader item-2">
+        <h4 class="jsonDataName">Last 2 digits</h4>
+        <p class="result-count" id="result-count-jsonData8"></p>
+      </div>
+      <div id="file-data-container-1" class="file-data-container content visible item-2">
+        <div class="data-container file-data">
+          <ul id="jsonData8"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="disclaimer"><em>Note: This app is for entertainment and informational purposes only and is not affiliated with official lottery organizations.</em></p>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/array.js"></script>
+  <script>
+    // Promo szekció kinyitása/összecsukása
+    function togglePromoContent() {
+      const section = document.querySelector('.promo-section');
+      const content = document.querySelector('.promo');
+      const button = document.querySelector('.more-info-btn');
+      if (content.classList.contains('collapsed')) {
+        content.classList.remove('collapsed');
+        content.classList.add('expanded');
+        button.textContent = 'Less Info';
+      } else {
+        content.classList.remove('expanded');
+        content.classList.add('collapsed');
+        content.scrollTop = 0;
+        button.textContent = 'More Info';
+      }
+    }
+
+    function randomPosition(min, max) {
+      return Math.floor(Math.random() * (max - min + 5)) + min;
+    }
+    function setRandom50PercentPosition() {
+      const x = randomPosition(-33, 33);
+      const y = randomPosition(-25, 10);
+      const styleSheet = document.styleSheets[0];
+      const keyframesIndex = [...styleSheet.cssRules].findIndex(rule => rule.name === "elephant");
+      if (keyframesIndex > -1) {
+        styleSheet.deleteRule(keyframesIndex);
+      }
+      const keyframes = `
+        @-webkit-keyframes elephant {
+          0% { background-position: 50% 10%; }
+          50% { background-position: calc(50% + ${x}vw) calc(25% + ${y}vh); }
+          100% { background-position: 50% 10%; }
+        }
+      `;
+      styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+    }
+    const div = document.querySelector('.bg-image');
+    div.addEventListener('animationiteration', setRandom50PercentPosition);
+    setRandom50PercentPosition();
+  </script>
+</body>
+
+</html>
