@@ -80,6 +80,11 @@ body {
     overflow: hidden;
 }
 
+.top-bar-policy{
+    display: flex    ;
+    justify-content: space-between;
+}
+
 .promo-title {
     font-size: 2.5rem;
     color: #ff8500;
